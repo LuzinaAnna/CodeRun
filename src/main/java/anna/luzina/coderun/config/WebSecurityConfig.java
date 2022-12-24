@@ -13,6 +13,8 @@ import org.springframework.security.config.annotation.web.configurers.LogoutConf
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler;
+import org.springframework.security.web.util.matcher.RequestHeaderRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -58,7 +60,9 @@ public class WebSecurityConfig {
                 .formLogin((form) -> form
                         .loginPage("/login")
                         .permitAll())
-                .logout(LogoutConfigurer::permitAll)
+                .logout((logout) -> logout
+                        .defaultLogoutSuccessHandlerFor(new SimpleUrlLogoutSuccessHandler(), new RequestHeaderRequestMatcher("/logout"))
+                        .permitAll())
                 .authenticationProvider(authenticationProvider())
                 .headers().frameOptions().sameOrigin();
 
