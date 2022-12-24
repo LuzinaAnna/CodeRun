@@ -11,7 +11,7 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Setter
-    private Long id;
+    private Integer id;
 
     @Setter
     @Getter
@@ -30,8 +30,15 @@ public class Task {
     @Setter
     private int numberSent;
 
+    @Getter
+    @Setter
+    private String description;
+
 
     public double getDifficult() {
+        if (numberSent == 0){
+            return 0;
+        }
         return (double)numberSolvedCorrectly / numberSent;
     }
 
@@ -39,8 +46,5 @@ public class Task {
         return description.substring(0, 255) + "...";
     }
 
-    @Lob
-    @Getter
-    @Setter
-    private String description;
+
 }

@@ -7,8 +7,9 @@
     <title>Title</title>
 </head>
 <body>
-    <form th:action="@{/adminPanel/createTask}">
+    <form th:action="@{/adminPanel/createTask}" th:method="get">
         <div> Тут создаются задачи</div>
+        <input type="submit" value="CreateTask">
     </form>
 </body>
 </html>
