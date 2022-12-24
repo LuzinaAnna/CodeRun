@@ -1,6 +1,6 @@
 package anna.luzina.coderun.service.interfaces;
 
-import anna.luzina.coderun.model.User;
+import anna.luzina.coderun.domain.User;
 
 import java.util.List;
 

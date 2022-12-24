@@ -1,4 +1,4 @@
-package anna.luzina.coderun.model;
+package anna.luzina.coderun.domain;
 
 
 import jakarta.persistence.*;

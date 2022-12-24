@@ -1,4 +1,4 @@
-package anna.luzina.coderun.model;
+package anna.luzina.coderun.domain;
 
 public enum Role {
     USER,

@@ -1,6 +1,6 @@
 package anna.luzina.coderun.controller;
 
-import anna.luzina.coderun.model.User;
+import anna.luzina.coderun.domain.User;
 import anna.luzina.coderun.repository.UserRepo;
 import anna.luzina.coderun.service.interfaces.UserService;
 import org.springframework.stereotype.Controller;

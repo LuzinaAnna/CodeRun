@@ -1,8 +1,8 @@
 
 
 package anna.luzina.coderun.service;
-import anna.luzina.coderun.model.Role;
-import anna.luzina.coderun.model.User;
+import anna.luzina.coderun.domain.Role;
+import anna.luzina.coderun.domain.User;
 import anna.luzina.coderun.repository.UserRepo;
 import anna.luzina.coderun.service.interfaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService, UserDetailsService {
