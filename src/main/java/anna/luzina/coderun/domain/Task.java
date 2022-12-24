@@ -20,14 +20,27 @@ public class Task {
     @OneToMany
     @Setter
     @Getter
-    private Set<Tag> tag;
+    private Set<Tag> tags;
 
+    @Setter
+    @Getter
+    private int numberSolvedCorrectly;
+
+    @Getter
+    @Setter
+    private int numberSent;
+
+
+    public double getDifficult() {
+        return (double)numberSolvedCorrectly / numberSent;
+    }
+
+    public String getShortTaskDescription(){
+        return description.substring(0, 255) + "...";
+    }
 
     @Lob
     @Getter
     @Setter
     private String description;
-
-    @Getter
-    private double difficult;
 }

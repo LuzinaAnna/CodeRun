@@ -1,41 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
-      lang="en">
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home</title>
 </head>
 <body>
-<form th:action="@{/logout}" method="post">
-    <button type="submit">
-        Logout
-    </button>
-</form>
-
-<!--        <h2>Welcome</h2>-->
-<!--        <p>Spring Security Thymeleaf tutorial</p>-->
-<!--        <div sec:authorize="hasAuthority('USER')">Text visible to user.</div>-->
-<!--        <div sec:authorize="hasAuthority('ADMIN')">Text visible to admin.</div>-->
-<!--        <div sec:authorize="isAuthenticated()">-->
-<!--            Text visible only to authenticated users.-->
-<!--        </div>-->
-<!--        Authenticated username:-->
-<!--        <div sec:authentication="name"></div>-->
-<!--        Authenticated user roles:-->
-<!--        <div sec:authentication="principal.authorities"></div>-->
-<div sec:authorize="hasAuthority('ADMIN')">
-    <form th:action="@{/adminPanel}" th:method="get">
-        <label for="admin_panel">Admin panel</label><input id="admin_panel" type="submit" th:value="panel">
-    </form>
-</div>
-
-<div th:each="task : ${tasks}">
-    <div th:value="${task.getTitle()}">
-
-    </div>
-    <div th:value="${task.getDescription()}">
-
+<div th:each="task: ${tasks}">
+<div th:text="${task.title}"></div>
+    <div th:text="${task.title}"></div>
+    <div th:text="${task.difficult}"></div>
+    <div th:text="${task.shortTaskDescription}"></div>
+    <div th:each="tag: ${task.tags}">
+        <div th:text="${tag.name}"></div>
     </div>
 </div>
 </body>

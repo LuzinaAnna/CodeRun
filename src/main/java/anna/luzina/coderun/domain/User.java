@@ -2,6 +2,8 @@ package anna.luzina.coderun.domain;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,6 +21,11 @@ public class User implements UserDetails {
     private String username;
     private String password;
     private boolean active;
+
+    @OneToMany
+    @Getter
+    @Setter
+    private Set<Task> solvedTasks;
 
     @Column(name = "locked")
     private Boolean locked = false;
