@@ -17,9 +17,9 @@
     </form>
 </div>
 <div th:each="task: ${tasks}">
-    <div th:value="${task.getTitle()}"></div>
-    <div th:text="${task.getDifficult()}"></div>
+    <div th:text="${task.getTitle()}"></div>
     <div th:text="${task.getDescription()}"></div>
+    <div th:text="${task.getDifficult()}"></div>
     <div th:each="tag: ${task.getTags()}">
         <div th:text="${tag.getName()}"></div>
     </div>

@@ -14,7 +14,8 @@ public class HomeController {
     TaskRepo taskRepo;
     @GetMapping
     public String getHomePage(Model model) {
-        model.addAttribute("tasks", taskRepo.findAll());
+        var tasks = taskRepo.findAll();
+        model.addAttribute("tasks", tasks);
         return "home";
     }
 }
