@@ -22,7 +22,6 @@ public class Task {
     @Getter
     private Set<Tag> tag;
 
-    private
 
     @Lob
     @Getter
