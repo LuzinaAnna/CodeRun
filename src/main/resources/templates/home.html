@@ -16,8 +16,12 @@
         <input type="submit" value="AdminPanel">
     </form>
 </div>
+
 <div th:each="task: ${tasks}">
-    <a th:href="@{/task/{taskId}(taskId = ${task.getId()})}" th:text="${task.getTitle()}"></a>
+    <div sec:authorize="hasAuthority('ADMIN')">
+        <div th:text="${task.getId()}"></div>
+    </div>
+    <div th:text="${task.getTitle()}"></div>
     <div th:text="${task.getDescription()}"></div>
     <div th:text="${task.getDifficult()}"></div>
     <div th:each="tag: ${task.getTags()}">

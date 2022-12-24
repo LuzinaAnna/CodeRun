@@ -12,6 +12,7 @@ public class GlobalControllerAdvice {
     @Autowired
     UserRepo userRepo;
 
+    //TODO:Удали эту хуйню, есть sec:authentication="name"
     @ModelAttribute("currentUser")
     public User currentUser() {
         return userRepo.findByUsername(SecurityContextHolder.getContext().getAuthentication().getName());
