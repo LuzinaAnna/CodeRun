@@ -10,7 +10,7 @@ import java.util.Set;
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Setter
+    @Getter
     private Integer id;
 
     @Setter

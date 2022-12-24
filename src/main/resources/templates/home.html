@@ -17,7 +17,7 @@
     </form>
 </div>
 <div th:each="task: ${tasks}">
-    <div th:text="${task.getTitle()}"></div>
+    <a th:href="@{/task/{taskId}(taskId = ${task.getId()})}" th:text="${task.getTitle()}"></a>
     <div th:text="${task.getDescription()}"></div>
     <div th:text="${task.getDifficult()}"></div>
     <div th:each="tag: ${task.getTags()}">

@@ -8,11 +8,13 @@
 <form th:method="POST" th:action="@{/registration}">
     <label>Username</label>
     <input type="text" name="username">
+    <br>
     <label>Password</label>
     <input type="text" name="password">
+    <br>
     <input type="submit" value="Register">
-    <div th:if="${message}" th:text="${message}" style="color:aliceblue; font-size: 25px;">
-    </div>
+    <div th:if="${message}" th:text="${message}" style="color:aliceblue; font-size: 25px;"></div>
+    <br>
 </form>
 </body>
 </html>

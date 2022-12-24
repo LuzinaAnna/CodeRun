@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Solve page</title>
+</head>
+<body>
+<form th:action="@{/}" th:method="GET">
+    <input type="submit" value="TO HOME PAGE">
+</form>
+<div th:text="${task.title}"></div>
+<div th:text="${task.description}"></div>
+<form th:action="@{/task/{taskId}(taskId = ${task.getId()})}" th:method="POST">
+    <textarea name="solve">
+
+    </textarea>
+    <br>
+    <input type="submit" value="SEND SOLVE">
+</form>
+</body>
+</html>
