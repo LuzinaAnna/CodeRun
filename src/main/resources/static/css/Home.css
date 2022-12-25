@@ -31,3 +31,69 @@ header h1 {
     white-space: nowrap;
     overflow: hidden;
 }
+.btn1 {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: -40px 700px 10px 640px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #7B68EE;
+    background-color: #e6e6fa;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+}
+.btn1:focus-visible {
+    box-shadow: 0 0 0 2px #666;
+}
+.btn1:hover {
+    background-color: #dda0dd;
+}
+.btn1:active {
+    transform: scale(0.96);
+}
+.btn1:disabled {
+    pointer-events: none;
+    opacity: 0.65;
+}
+.btn2 {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: 0px 800px 10px 623px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #7B68EE;
+    background-color: #e6e6fa;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+}
+.btn2:focus-visible {
+    box-shadow: 0 0 0 2px #666;
+}
+.btn2:hover {
+    background-color: #dda0dd;
+}
+.btn2:active {
+    transform: scale(0.96);
+}
+.btn2:disabled {
+    pointer-events: none;
+    opacity: 0.65;
+}
