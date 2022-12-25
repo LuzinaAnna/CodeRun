@@ -64,3 +64,9 @@ header h1 {
     pointer-events: none;
     opacity: 0.65;
 }
+#ebanyText{
+    margin-left: 580px;
+    font-size: 25px;
+    color: #553c9a;
+    font-weight: bold;
+}
