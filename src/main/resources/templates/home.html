@@ -4,16 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/Home.css}">
 </head>
 <body>
+<header>
+    <h1>Code Run</h1>
+</header>
 
 <form th:action="@{/logout}" th:method="post">
-    <input type="submit" value="LogOut">
+    <input type="submit" value="LogOut" class="btn1">
 </form>
 
 <div sec:authorize="hasAuthority('ADMIN')">
     <form th:action="@{/adminPanel}" th:method="get">
-        <input type="submit" value="AdminPanel">
+        <input type="submit" value="AdminPanel" class="btn2">
     </form>
 </div>
 
