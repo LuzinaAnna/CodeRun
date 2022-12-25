@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="CreateTask.css">
+    <link rel="stylesheet" href="../static/CreateTask.css">
 </head>
 <body>
 <form th:action="@{/adminPanel/createTask}" th:method="post">
@@ -23,7 +23,7 @@
     <label id="ta">Tag</label>
     <input type="text" id="tagBox" th:name="tag"><br>
 
-    <input th:href="@{/adminPanel/createTask}" type="submit" value="Create Task"  class="btn">
+    <input type="submit" value="Create Task"  class="btn">
 </form>
 </body>
 </html>
