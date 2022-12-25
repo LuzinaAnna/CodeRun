@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
+    <link rel="stylesheet" href="../static/css/Registration.css">
 </head>
 <body>
 <form th:method="POST" th:action="@{/registration}">
-    <label>Username</label>
-    <input type="text" name="username">
+    <header>
+        <h1>Code Run</h1>
+    </header>
+    <label id="regUsen">Username</label>
+    <input type="text" name="username" id="regUsernameBox">
     <br>
-    <label>Password</label>
-    <input type="text" name="password">
+    <label id="regPas">Password</label>
+    <input type="text" name="password" id="regPasswordBox">
     <br>
-    <input type="submit" value="Register">
+    <input type="submit" value="Register" class="btn5">
     <div th:if="${message}" th:text="${message}" style="color:aliceblue; font-size: 25px;"></div>
     <br>
 </form>

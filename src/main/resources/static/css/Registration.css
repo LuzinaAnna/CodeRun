@@ -1,0 +1,88 @@
+html {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+@keyframes cursor{
+    0%, 100%{border-color: transparent;}
+    50%{border-color: #000;}
+}
+@keyframes typing{
+    0%{ width: 0ch}
+    30%{ width: 8ch;}
+    80%{ width: 8ch;}
+    90%{ width: 0ch;}
+    100%{ width: 0ch;}
+}
+header h1 {
+    font-size: 70px;
+    font-weight: 600;
+    font-family: Courier New, serif;
+    color: #553c9a;
+    margin-top: 0px;
+    margin-left: 100px;
+    border-right: 4px solid #000;
+    animation: cursor 1s infinite step-end, typing 7s infinite steps(8);
+    white-space: nowrap;
+    overflow: hidden;
+}
+#regUsernameBox{
+    margin-left: 10px;
+    width: 150px;
+    height: 15px
+}
+#regUsen{
+    margin-left: 495px;
+    font-size: 25px;
+    color: #553c9a;
+    font-weight: bold;
+}
+#regPas{
+    margin-left: 500px;
+    font-size: 25px;
+    color: #553c9a;
+    font-weight: bold;
+}
+#regPasswordBox{
+    margin-left: 10px;
+    width: 150px;
+    height: 15px
+}
+.btn5 {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: 10px 0px 0px 630px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #7B68EE;
+    background-color: #e6e6fa;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+}
+.btn5:focus-visible {
+    box-shadow: 0 0 0 2px #666;
+}
+.btn5:hover {
+    background-color: #dda0dd;
+}
+.btn5:active {
+    transform: scale(0.96);
+}
+.btn5:disabled {
+    pointer-events: none;
+    opacity: 0.65;
+}
