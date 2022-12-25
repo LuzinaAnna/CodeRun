@@ -2,7 +2,7 @@
     display: inline-block;
     box-sizing: border-box;
     padding: 0 20px;
-    margin: 0 15px 15px 0;
+    margin: -40px 700px 10px 840px;
     outline: none;
     border: none;
     border-radius: 6px;
@@ -57,8 +57,46 @@ header h1 {
     font-weight: 600;
     font-family: Courier New, serif;
     color: #553c9a;
+    margin-top: 0px;
+    margin-left: 100px;
     border-right: 4px solid #000;
     animation: cursor 1s infinite step-end, typing 7s infinite steps(8);
     white-space: nowrap;
     overflow: hidden;
 }
+#tit{
+    margin-left: 500px;
+    font-size: 25px;
+    color: #553c9a;
+    font-weight: bold;
+}
+#titleBox{
+    margin-left: 10px;
+    width: 150px;
+    height: 15px
+}
+#des{
+    margin-left: 425px;
+    font-size: 25px;
+    color: #553c9a;
+    font-weight: bold;
+    vertical-align: top;
+}
+#descriptionBox{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 400px;
+    height: 150px;
+}
+#ta{
+    margin-left: 500px;
+    font-size: 25px;
+    color: #553c9a;
+    font-weight: bold;
+}
+#tagBox{
+    margin-left: 20px;
+    width: 150px;
+    height: 15px
+}
+

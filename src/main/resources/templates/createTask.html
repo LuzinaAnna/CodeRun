@@ -10,23 +10,20 @@
 <body>
 <form th:action="@{/adminPanel/createTask}" th:method="post">
 
-    <label>Title </label>
-    <input type="text" id="title" th:name="title">
-    <br>
-    <label>Description</label>
-    <input type="text" id="description" th:name="description">
-    <br>
-
-
-    <label>Tag </label>
-    <input type="text" id="tag" th:name="tag">
-    <br>
-
-    <a href="#" class="btn">Create Task</a>
-
     <header>
         <h1>Code Run</h1>
     </header>
+
+    <label id="tit">Title</label>
+    <input type="text" id="titleBox" th:name="title"><br>
+
+    <label id="des">Description</label>
+    <input type="text" id="descriptionBox" th:name="description"><br>
+
+    <label id="ta">Tag</label>
+    <input type="text" id="tagBox" th:name="tag"><br>
+
+    <input th:href="@{/adminPanel/createTask}" type="submit" value="Create Task"  class="btn">
 </form>
 </body>
 </html>
