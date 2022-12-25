@@ -41,3 +41,24 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
+@keyframes cursor{
+    0%, 100%{border-color: transparent;}
+    50%{border-color: #000;}
+}
+@keyframes typing{
+    0%{ width: 0ch}
+    30%{ width: 8ch;}
+    80%{ width: 8ch;}
+    90%{ width: 0ch;}
+    100%{ width: 0ch;}
+}
+header h1 {
+    font-size: 70px;
+    font-weight: 600;
+    font-family: Courier New, serif;
+    color: #553c9a;
+    border-right: 4px solid #000;
+    animation: cursor 1s infinite step-end, typing 7s infinite steps(8);
+    white-space: nowrap;
+    overflow: hidden;
+}
