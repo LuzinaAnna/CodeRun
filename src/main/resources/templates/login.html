@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link rel="stylesheet" href="../static/css/Login.css">
 </head>
 <body>
 <form th:method="POST" th:action="@{/login}">
-    <input type="text" name="username" required="">
-    <label>Username</label>
+    <header>
+        <h1>Code Run</h1>
+    </header>
+
+    <label id="usen">Username</label>
+    <input type="text" name="username" required="" id="usernameBox">
     <br>
-    <input type="text" name="password" required="">
-    <label>Password</label>
+    <label id="pas">Password</label>
+    <input type="text" name="password" required="" id="passwordBox">
     <br>
-    <input type="submit" value="Login">
+    <input type="submit" value="Login" class="btn3">
 </form>
 
 <form th:action="@{/registration}" th:method="GET">
-    <input type="submit" value="Register">
+    <input type="submit" value="Register" class="btn4">
 </form>
 </body>
 </html>
