@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../static/CreateTask.css">
+    <link rel="stylesheet" th:href="@{/css/CreateTask.css}">
 </head>
 <body>
 <form th:action="@{/adminPanel/createTask}" th:method="post">
