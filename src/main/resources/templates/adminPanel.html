@@ -5,11 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../static/css/Admin.css">
 </head>
 <body>
+<header>
+    <h1>Code Run</h1>
+</header>
     <form th:action="@{/adminPanel/createTask}" th:method="get">
         <div> Тут создаются задачи</div>
-        <input type="submit" value="CreateTask">
+        <input type="submit" value="CreateTask" class="btn8">
     </form>
 </body>
 </html>
