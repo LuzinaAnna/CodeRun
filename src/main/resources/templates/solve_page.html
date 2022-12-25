@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Solve page</title>
+    <link rel="stylesheet" href="../static/css/Solve.css">
 </head>
 <body>
+<header>
+    <h1>Code Run</h1>
+</header>
 <form th:action="@{/}" th:method="GET">
-    <input type="submit" value="TO HOME PAGE">
+    <input type="submit" value="TO HOME PAGE" class="btn6">
 </form>
 <div th:text="${task.title}"></div>
 <div th:text="${task.description}"></div>
 <form th:action="@{/task/{taskId}(taskId = ${task.getId()})}" th:method="POST">
-    <textarea name="solve">
+    <textarea name="solve" id="solveBox">
 
     </textarea>
     <br>
-    <input type="submit" value="SEND SOLVE">
+    <input type="submit" value="SEND SOLVE" class="btn7">
 </form>
 </body>
 </html>
